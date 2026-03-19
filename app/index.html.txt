@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CI/CD DevOps Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🚀 CI/CD Pipeline Project</h1>
+  <p>Automated Deployment using Docker, Jenkins & Kubernetes</p>
+  <button onclick="alert('Pipeline Working 🚀')">Click Me</button>
+</body>
+</html>
