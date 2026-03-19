@@ -8,13 +8,17 @@ pipeline {
 
     stages {
 
-        stage('Build Docker Image') {
+        stage('Checkout Code') {
             steps {
-                script {
-                    docker.build("${DOCKER_IMAGE}:${BUILD_NUMBER}")
-                }
+                git 'https://github.com/satishbhise01-coder/CI_CD-Project.git'
             }
         }
+
+        stage('Build Docker Image') {
+    steps {
+        sh "docker build -t ${DOCKER_IMAGE}:${BUILD_NUMBER} ."
+    }
+}
 
         stage('Login to DockerHub') {
             steps {
